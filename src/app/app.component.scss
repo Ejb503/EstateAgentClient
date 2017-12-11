@@ -1,0 +1,40 @@
+@import '../assets/scss/variables.scss';
+
+h3 {
+	font-size: 16px;
+}
+
+.example-card {
+	margin: 10px 0;
+}
+
+td {
+    padding: 4px 20px;
+    text-align: center;
+}
+
+tr {
+	border: solid 1px;
+}
+
+/* Structure */
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 100vh;
+}
