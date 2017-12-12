@@ -24,9 +24,6 @@ import { MatRadioModule } from '@angular/material';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
 
-// Pipes
-import { ReversePipe } from './reverse.pipe';
-
 // Components
 import { AppComponent } from './app.component';
 
