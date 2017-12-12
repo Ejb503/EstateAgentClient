@@ -35,6 +35,10 @@ export class DataService {
     return this.http.get(this.host+'listStreams');
   } 
 
+  subscribeStream(stream) : Observable<promise> { 
+    return this.http.get(this.host+'subscribeStream/'+stream);
+  } 
+
   getStream(stream): Observable<promise> { 
     return this.http.get(this.host+'listStreams/'+stream);
   } 

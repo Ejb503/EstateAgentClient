@@ -23,9 +23,11 @@ export class AppComponent implements OnInit {
       this.blockChain = response;
 
       for(let key in this.blockChain){
-        this.blockChain[key].data = {};
-        this.dataService.getStream(response[key].name).subscribe(data => {
-          this.blockChain[key].data = data[0].data.json; 
+        this.dataService.subscribeStream(response[key].name).subscribe(response => {
+          this.blockChain[key].data = {};
+          this.dataService.getStream(response[key].name).subscribe(data => {
+            this.blockChain[key].data = data[0].data.json; 
+          });
         });
       }
       this.dataSource = new MatTableDataSource(this.blockChain);
