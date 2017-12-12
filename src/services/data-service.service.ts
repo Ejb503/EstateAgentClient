@@ -19,28 +19,28 @@ export class DataService {
 
   createStream(data) : Observable<promise> { 
     return this.http.post(
-      host+'createStream',
+      this.host+'createStream',
       data
     );
   } 
 
   publishComment(data) : Observable<promise> {
     return this.http.post(
-      host+'publishComment',
+      this.host+'publishComment',
       data
     );
   }
 
   listStreams() : Observable<promise> { 
-    return this.http.get(host+'listStreams');
+    return this.http.get(this.host+'listStreams');
   } 
 
   getStream(stream): Observable<promise> { 
-    return this.http.get(host+'listStreams/'+stream);
+    return this.http.get(this.host+'listStreams/'+stream);
   } 
 
   createOffer(stream): Observable<promise> { 
-    return this.http.get(host+'createOffer/'+stream);
+    return this.http.get(this.host+'createOffer/'+stream);
   } 
 
 }
